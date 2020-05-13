@@ -1,14 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.net.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sg.farmacia.cadastro.Controller.FornecedorController">
+<AnchorPane id="AnchorPane" prefHeight="508.0" prefWidth="591.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sg.farmacia.cadastro.Controller.FornecedorController">
     <stylesheets>
-        <URL value="@/sg/farmacia/cadastro/CSS/fornecedor.css"/>
+        <URL value="@/sg/farmacia/cadastro/CSS/fornecedor.css" />
     </stylesheets>
+   <children>
+      <TitledPane animated="false" layoutX="8.0" layoutY="8.0" prefHeight="494.0" prefWidth="565.0" text="Cadastro  Fornecedor">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="429.0" prefWidth="804.0">
+               <children>
+                  <Button fx:id="bt_novo" layoutX="25.0" layoutY="25.0" mnemonicParsing="false" text="Novo" />
+                  <Button fx:id="bt_alterar" layoutX="118.0" layoutY="25.0" mnemonicParsing="false" text="Alterar" />
+                  <Button fx:id="bt_gravar" layoutX="217.0" layoutY="25.0" mnemonicParsing="false" text="Gravar" />
+                  <Button fx:id="bt_procurar" layoutX="316.0" layoutY="25.0" mnemonicParsing="false" text="Procurar" />
+                  <Button fx:id="bt_excluir" layoutX="419.0" layoutY="25.0" mnemonicParsing="false" text="Excluir" />
+                  <Pane layoutX="11.0" layoutY="76.0" prefHeight="383.0" prefWidth="525.0" style="-fx-background-color: #ADD8E6;">
+                     <children>
+                        <Label fx:id="lb_Codigo" layoutX="13.0" layoutY="14.0" text="Codigo" />
+                        <Label fx:id="lb_cadastro" layoutX="87.0" layoutY="14.0" prefHeight="17.0" prefWidth="109.0" text="Data de Cadastro" />
+                        <Label fx:id="lb_nomeFornecedor" layoutX="230.0" layoutY="14.0" text="Nome do Fornecedor" />
+                        <Label fx:id="lb_contacto" layoutX="15.0" layoutY="83.0" text="Contacto" />
+                        <Label fx:id="lb_contactoAuxiliar" layoutX="187.0" layoutY="83.0" text="Contacto Alternativo" />
+                        <TextField fx:id="txt_codigo" layoutX="7.0" layoutY="31.0" prefHeight="11.0" prefWidth="65.0" />
+                        <TextField fx:id="txt_dataCadastro" layoutX="87.0" layoutY="31.0" prefHeight="25.0" prefWidth="112.0" />
+                        <TextField fx:id="txt_nomeFornecedor" layoutX="230.0" layoutY="31.0" prefHeight="25.0" prefWidth="284.0" />
+                        <TextField fx:id="txt_contacto" layoutX="7.0" layoutY="104.0" prefHeight="25.0" prefWidth="155.0" />
+                        <TextField fx:id="txt_contactoAuxiliar" layoutX="182.0" layoutY="104.0" />
+                        <Label fx:id="lb_email" layoutX="25.0" layoutY="149.0" text="Email" />
+                        <TextField fx:id="txt_email" layoutX="10.0" layoutY="172.0" prefHeight="25.0" prefWidth="161.0" />
+                        <ImageView fx:id="img_lotipo" fitHeight="179.0" fitWidth="165.0" layoutX="349.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../imagens/logo_03.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="lb_logotipoFornecedor" layoutX="374.0" layoutY="83.0" text="Logotipo Fornecedor" />
+                        <Label fx:id="lb_nuit" layoutX="186.0" layoutY="149.0" text="NUIT" />
+                        <TextField fx:id="txt_nuit" layoutX="180.0" layoutY="172.0" />
+                        <TextField fx:id="txt_localizacao" layoutX="13.0" layoutY="232.0" prefHeight="25.0" prefWidth="320.0" />
+                        <Label fx:id="lb_localizacao" layoutX="18.0" layoutY="210.0" text="Localização" />
+                        <Button fx:id="bt_adicionarLogo" layoutX="354.0" layoutY="309.0" mnemonicParsing="false" text="Adcionar/Alterar logotipo" />
+                        <Label fx:id="lb_observacao" layoutX="17.0" layoutY="267.0" text="Observação" />
+                        <TextArea fx:id="txt_observacao" layoutX="9.0" layoutY="291.0" prefHeight="78.0" prefWidth="340.0" />
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
 </AnchorPane>

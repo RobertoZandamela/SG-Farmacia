@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sg.farmacia.cadastro.Controller;
+package sg.farmacia.Controller.Cadastro;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -14,11 +14,9 @@ import javafx.fxml.Initializable;
  *
  * @author Roberto
  */
-public class ProdutoController implements Initializable {
+public class FuncionarioController implements Initializable {
 
-    /**
-     * Initializes the controller class.
-     */
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

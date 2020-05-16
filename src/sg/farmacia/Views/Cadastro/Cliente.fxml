@@ -75,8 +75,8 @@
                         <Button fx:id="bt_inserirFotoCliente" layoutX="556.0" layoutY="307.0" mnemonicParsing="false" text="Inserir Foto Cliente" />
                         <Label fx:id="lb_observacao" layoutX="19.0" layoutY="324.0" text="Observação" />
                         <TextArea fx:id="txt_observacao" layoutX="18.0" layoutY="341.0" prefHeight="61.0" prefWidth="689.0" />
-                        <RadioButton layoutX="13.0" layoutY="161.0" mnemonicParsing="false" text="Masculino" />
-                        <RadioButton layoutX="97.0" layoutY="161.0" mnemonicParsing="false" text="Femenino" />
+                        <RadioButton fx:id="rad_masculino" layoutX="13.0" layoutY="161.0" mnemonicParsing="false" text="Masculino" />
+                        <RadioButton fx:id="rad_femenino" layoutX="97.0" layoutY="161.0" mnemonicParsing="false" text="Femenino" />
                         <SplitMenuButton fx:id="tipoDocumento" layoutX="9.0" layoutY="95.0" mnemonicParsing="false" text="Bilhete de identidade">
                           <items>
                             <MenuItem mnemonicParsing="false" text="Action 1" />

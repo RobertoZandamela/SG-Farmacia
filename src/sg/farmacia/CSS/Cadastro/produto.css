@@ -1,0 +1,19 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+.pane_produto{
+    -fx-background-color:whitesmoke;
+    -fx-border-style:solid;
+    -fx-border-width:2px;
+    -fx-border-color:blue;
+}
+
+.imgProduto{
+   -fx-image:url(/imagens/img.jpg);
+   -fx-background-color:blue;
+}

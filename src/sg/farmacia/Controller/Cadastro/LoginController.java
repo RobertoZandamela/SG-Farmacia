@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sg.farmacia.cadastro.Controller;
+package sg.farmacia.Controller.Cadastro;
 
 import java.net.URL;
 import java.util.ResourceBundle;

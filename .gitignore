@@ -5,3 +5,5 @@
 /nbproject/build-impl.xml
 /nbproject/configs/Run_in_Browser.properties
 /nbproject/configs/Run_as_WebStart.properties
+/dist/
+/build/

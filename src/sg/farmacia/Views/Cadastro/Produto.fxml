@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="544.0" prefWidth="872.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="sg.farmacia.cadastro.Controller.ProdutoController">
+    <stylesheets>
+        <URL value="@/sg/farmacia/cadastro/CSS/produto.css" />
+    </stylesheets>
+   <children>
+      <Label fx:id="lb_cadastroProduto" layoutX="21.0" layoutY="6.0" text="Cadastro Produto" />
+      <Button fx:id="bt_novo" layoutX="27.0" layoutY="38.0" mnemonicParsing="false" text="Novo (F2)" />
+      <Button fx:id="bt_guardar" layoutX="115.0" layoutY="38.0" mnemonicParsing="false" text="Guardar F3" />
+      <Button fx:id="bt_alterar" layoutX="214.0" layoutY="38.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Alterar (F4)" />
+      <Button fx:id="bt_procurar" layoutX="321.0" layoutY="38.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="86.0" text="Procurar" />
+      <Button fx:id="bt_apagar" layoutX="423.0" layoutY="38.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Apagar" />
+      <Button fx:id="bt_imprimirEtiquete" layoutX="535.0" layoutY="38.0" mnemonicParsing="false" text="Imprimir Etiquete" />
+      <Button fx:id="bt_sair" layoutX="674.0" layoutY="38.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" text="Sair" />
+      <Pane layoutX="13.0" layoutY="103.0" prefHeight="430.0" prefWidth="842.0" styleClass="pane_produto" stylesheets="@../../CSS/Cadastro/produto.css">
+         <children>
+            <Label fx:id="lb_codigo" layoutX="30.0" layoutY="14.0" text="Código/Cód. barras" />
+            <TextField fx:id="txt_codigo" layoutX="22.0" layoutY="31.0" prefHeight="25.0" prefWidth="188.0" />
+            <Button fx:id="bt_gerarCodigo" layoutX="216.0" layoutY="31.0" mnemonicParsing="false" text="Gerar" />
+            <Label fx:id="lb_descricao" layoutX="313.0" layoutY="14.0" text="Descrição" />
+            <TextField fx:id="txt_descricao" layoutX="290.0" layoutY="31.0" prefHeight="25.0" prefWidth="544.0" />
+            <Label fx:id="lb_precoCompra" layoutX="22.0" layoutY="76.0" text="Preço de Compra" />
+            <Label fx:id="lb_precoVenda" layoutX="146.0" layoutY="76.0" text="Preço de Venda" />
+            <TextField fx:id="txt_precoCompra" layoutX="22.0" layoutY="93.0" prefHeight="25.0" prefWidth="94.0" />
+            <TextField fx:id="txt_precoVenda" layoutX="146.0" layoutY="93.0" prefHeight="25.0" prefWidth="83.0" />
+            <ComboBox fx:id="cbox_quantidade" layoutX="252.0" layoutY="93.0" prefHeight="25.0" prefWidth="62.0" />
+            <Label layoutX="252.0" layoutY="76.0" text="Quantidade" />
+            <Label fx:id="lb_formaFarmaceutica" layoutX="331.0" layoutY="76.0" text="Forma Farmaceutica" />
+            <ComboBox fx:id="cbox_formaFarmcautica" layoutX="331.0" layoutY="93.0" prefHeight="25.0" prefWidth="188.0" />
+            <ComboBox fx:id="cbox_dosagem" layoutX="541.0" layoutY="93.0" prefHeight="25.0" prefWidth="92.0" />
+            <Label fx:id="lb_dosagem" layoutX="541.0" layoutY="76.0" text="Dosagem" />
+            <ImageView fx:id="img_fotoproduto" fitHeight="182.0" fitWidth="161.0" layoutX="669.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true" styleClass="imgProduto" />
+            <Label fx:id="lb_fotoProduto" layoutX="710.0" layoutY="76.0" text="Foto Produto" />
+            <Label fx:id="lb_categoria" layoutX="22.0" layoutY="132.0" text="Categoria" />
+            <Label fx:id="lb_fornecedor" layoutX="17.0" layoutY="187.0" text="Fornecedor" />
+            <ComboBox fx:id="cbox_categoria" layoutX="16.0" layoutY="149.0" prefHeight="25.0" prefWidth="438.0" />
+            <Button fx:id="bt_cadastrarCategoria" layoutX="467.0" layoutY="149.0" mnemonicParsing="false" text="Cad." />
+            <ComboBox fx:id="cbox_fornecedor" layoutX="14.0" layoutY="204.0" prefHeight="25.0" prefWidth="368.0" />
+            <Button fx:id="bt_cadastrarForneceedor" layoutX="399.0" layoutY="204.0" mnemonicParsing="false" text="Cad." />
+            <Label fx:id="lb_estoqueMinimo" layoutX="476.0" layoutY="187.0" text="Estoque Minimo" />
+            <TextField fx:id="txt_estoqueMinimo" layoutX="476.0" layoutY="204.0" prefHeight="25.0" prefWidth="113.0" />
+            <Label fx:id="lb_garantia" layoutX="16.0" layoutY="248.0" text="Garantia" />
+            <TextField fx:id="txt_garantia" layoutX="14.0" layoutY="266.0" />
+            <Label fx:id="lb_marca" layoutX="221.0" layoutY="248.0" text="Marca" />
+            <TextField fx:id="txt_marca" layoutX="179.0" layoutY="266.0" prefHeight="25.0" prefWidth="149.0" />
+            <Label fx:id="lb_referencia" layoutX="371.0" layoutY="248.0" text="Referência" />
+            <TextField fx:id="txt_referencia" layoutX="347.0" layoutY="266.0" prefHeight="25.0" prefWidth="128.0" />
+            <TextField fx:id="txt_validade" layoutX="488.0" layoutY="266.0" />
+            <Label fx:id="lb_validade" layoutX="505.0" layoutY="248.0" text="Validade" />
+            <Label fx:id="lb_obsevacao" layoutX="16.0" layoutY="305.0" prefHeight="17.0" prefWidth="70.0" text="Observação" />
+            <TextArea fx:id="txt_observacao" layoutX="98.0" layoutY="303.0" prefHeight="64.0" prefWidth="537.0" />
+            <Label fx:id="lb_nota1" layoutX="55.0" layoutY="367.0" prefHeight="17.0" prefWidth="438.0" text="NB:  O sistema não permite guardar o mesmo código para produtos diferentes" />
+            <Label fx:id="lb_nota2" layoutX="82.0" layoutY="384.0" prefHeight="17.0" prefWidth="344.0" text="O preço de compra sempre deve ser inferior ao preço de venda" />
+            <Label fx:id="lb_nota3" layoutX="82.0" layoutY="401.0" prefHeight="17.0" prefWidth="374.0" text="Configure a margem de lucro nas configurações gerencias." />
+            <Label fx:id="lb_estoqueActual" layoutX="717.0" layoutY="295.0" prefHeight="17.0" prefWidth="92.0" text="Estoque Actual" />
+            <Label fx:id="lb_valorEstoqueActual" layoutX="707.0" layoutY="315.0" prefHeight="45.0" prefWidth="86.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

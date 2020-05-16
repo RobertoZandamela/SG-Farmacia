@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sg.farmacia.cadastro.Controller;
+package sg.farmacia.Controller.Cadastro;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -12,6 +12,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.SplitMenuButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -184,10 +185,17 @@ public class ClienteController implements Initializable {
     
     @FXML
     private SplitMenuButton tipoDocumento;
+     @FXML
+    private RadioButton rad_masculino;
+
+    @FXML
+    private RadioButton rad_femenino;
+
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
     
+     
 }

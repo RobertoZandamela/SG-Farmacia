@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sg.farmacia.cadastro.Model;
+package sg.farmacia.model.Cadastro;
 
 import java.util.Date;
 
@@ -12,13 +12,13 @@ import java.util.Date;
  * @author Roberto
  */
 public class Pessoa {
-    protected int codigo,celular;
-   protected String nome,email,foto,numBI,mae,pai;
-    protected char genero,estadoCivil;
+    protected int codigo;
+    protected long celular;
+   protected String nome,email,foto,numBI,morada;
    protected Date dataEmissao,dataNascimento;
  
  public Pessoa(int codigo,int celular,String nome, String email,String foto,
-         String numBI, String mae, String pai, char genero, char estadoCivil,
+         String numBI,String morada,
          Date dataEmissao, Date dataNascimento){
      this.codigo=codigo;
      this.celular=celular;
@@ -26,10 +26,7 @@ public class Pessoa {
      this.email=email;
      this.foto=foto;
      this.numBI=numBI;
-     this.mae =mae;
-     this.pai =pai;
-     this.genero= genero;
-     this.estadoCivil =estadoCivil;
+     this.morada =morada;
      this.dataEmissao= dataEmissao;
     this.dataNascimento=dataNascimento;
      
@@ -46,11 +43,11 @@ public class Pessoa {
         this.codigo = codigo;
     }
 
-    public int getCelular() {
+    public long getCelular() {
         return celular;
     }
 
-    public void setCelular(int celular) {
+    public void setCelular(long celular) {
         this.celular = celular;
     }
 
@@ -86,36 +83,14 @@ public class Pessoa {
         this.numBI = numBI;
     }
 
-    public String getMae() {
-        return mae;
+
+
+    public String getMorada() {
+        return morada;
     }
 
-    public void setMae(String mae) {
-        this.mae = mae;
-    }
-
-    public String getPai() {
-        return pai;
-    }
-
-    public void setPai(String pai) {
-        this.pai = pai;
-    }
-
-    public char getGenero() {
-        return genero;
-    }
-
-    public void setGenero(char genero) {
-        this.genero = genero;
-    }
-
-    public char getEstadoCivil() {
-        return estadoCivil;
-    }
-
-    public void setEstadoCivil(char estadoCivil) {
-        this.estadoCivil = estadoCivil;
+    public void setMorada(String morada) {
+        this.morada = morada;
     }
 
     public Date getDataEmissao() {

@@ -7,6 +7,8 @@ package sg.farmacia.Controller.Cadastro;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -20,7 +22,8 @@ import javafx.scene.layout.AnchorPane;
  */
 public class LoginController implements Initializable {
 
-    @FXML
+    
+      @FXML
     private AnchorPane label_nomeFarmacia;
 
     @FXML
@@ -37,9 +40,13 @@ public class LoginController implements Initializable {
 
     @FXML
     private ImageView img_iconSenha;
-    @Override
+    
+      @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        bt_entrar.setOnAction((ActionEvent event) -> {
+        });
+         
     }    
     
 }

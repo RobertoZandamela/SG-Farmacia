@@ -47,8 +47,8 @@ public class ValidaExibeToolTip {
            objTimer.getKeyFrames().clear();
            objTimer.getKeyFrames().add(new KeyFrame(new Duration(3)));
            
-        } catch (NoSuchFieldException | SecurityException | IllegalArgumentException | IllegalAccessExeption e){
-            System.out.println("");
+        } catch (NoSuchFieldException | SecurityException | IllegalArgumentException | IllegalAccessException e){
+            System.out.println("Falha no tratamento");
         }
     }
 }

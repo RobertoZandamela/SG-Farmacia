@@ -13,25 +13,42 @@ import java.util.Date;
  */
 public class Pessoa {
     protected int codigo;
-    protected long celular;
-   protected String nome,email,foto,numBI,morada;
-   protected Date dataEmissao,dataNascimento;
- 
- public Pessoa(int codigo,int celular,String nome, String email,String foto,
-         String numBI,String morada,
-         Date dataEmissao, Date dataNascimento){
-     this.codigo=codigo;
-     this.celular=celular;
-     this.nome= nome;
-     this.email=email;
-     this.foto=foto;
-     this.numBI=numBI;
-     this.morada =morada;
-     this.dataEmissao= dataEmissao;
-    this.dataNascimento=dataNascimento;
-     
- }
-   
+    protected long cell, cellAlternativo;
+    protected char genero;
+   protected String nome,email,foto,tipoDocumento,numDocumento,rua,quarteirao,
+           numCasa,bairro,distrito,provincia;
+   protected Date dataEmissao,dataNascimento, dataCadastro;
+
+    public Pessoa(int codigo, long cell, long cellAlternativo, char genero, 
+            String nome, String email, String foto, String tipoDocumento, 
+            String numDocumento, String rua, String quarteirao, String numCasa, 
+            String bairro, String distrito, String provincia, Date dataEmissao, 
+            Date dataNascimento, Date dataCadastro) {
+        this.codigo = codigo;
+        this.cell = cell;
+        this.cellAlternativo = cellAlternativo;
+        this.genero = genero;
+        this.nome = nome;
+        this.email = email;
+        this.foto = foto;
+        this.tipoDocumento = tipoDocumento;
+        this.numDocumento = numDocumento;
+        this.rua = rua;
+        this.quarteirao = quarteirao;
+        this.numCasa = numCasa;
+        this.bairro = bairro;
+        this.distrito = distrito;
+        this.provincia = provincia;
+        this.dataEmissao = dataEmissao;
+        this.dataNascimento = dataNascimento;
+        this.dataCadastro = dataCadastro;
+    }
+
+    
+
+    
+
+    
     public Pessoa(){ 
     }
 
@@ -43,13 +60,22 @@ public class Pessoa {
         this.codigo = codigo;
     }
 
-    public long getCelular() {
-        return celular;
+    public String getQuarteirao() {
+        return quarteirao;
     }
 
-    public void setCelular(long celular) {
-        this.celular = celular;
+    public void setQuarteirao(String quarteirao) {
+        this.quarteirao = quarteirao;
     }
+
+    public char getGenero() {
+        return genero;
+    }
+
+    public void setGenero(char genero) {
+        this.genero = genero;
+    }
+
 
     public String getNome() {
         return nome;
@@ -75,22 +101,78 @@ public class Pessoa {
         this.foto = foto;
     }
 
-    public String getNumBI() {
-        return numBI;
+    public String getTipoDocumento() {
+        return tipoDocumento;
     }
 
-    public void setNumBI(String numBI) {
-        this.numBI = numBI;
+    public void setTipoDocumento(String tipoDocumento) {
+        this.tipoDocumento = tipoDocumento;
     }
 
-
-
-    public String getMorada() {
-        return morada;
+    public String getNumDocumento() {
+        return numDocumento;
     }
 
-    public void setMorada(String morada) {
-        this.morada = morada;
+    public void setNumDocumento(String numDocumento) {
+        this.numDocumento = numDocumento;
+    }
+
+    public Date getDataCadastro() {
+        return dataCadastro;
+    }
+
+    public void setDataCadastro(Date dataCadastro) {
+        this.dataCadastro = dataCadastro;
+    }
+
+   
+
+    public String getRua() {
+        return rua;
+    }
+
+    public void setRua(String rua) {
+        this.rua = rua;
+    }
+
+    public String getQuerteirao() {
+        return quarteirao;
+    }
+
+    public void setQuerteirao(String querteirao) {
+        this.quarteirao = querteirao;
+    }
+
+    public String getNumCasa() {
+        return numCasa;
+    }
+
+    public void setNumCasa(String numCasa) {
+        this.numCasa = numCasa;
+    }
+
+    public String getBairro() {
+        return bairro;
+    }
+
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
+    }
+
+    public String getDistrito() {
+        return distrito;
+    }
+
+    public void setDistrito(String distrito) {
+        this.distrito = distrito;
+    }
+
+    public String getProvincia() {
+        return provincia;
+    }
+
+    public void setProvincia(String provincia) {
+        this.provincia = provincia;
     }
 
     public Date getDataEmissao() {
@@ -108,5 +190,17 @@ public class Pessoa {
     public void setDataNascimento(Date dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
-    
+
+    public void setCell(Long cell){
+        this.cell= cell;
+    }
+    public long getCell(){
+        return cell;
+    }
+    public void setCellAlternativo(long cellAlternativo){
+        this.cellAlternativo=cellAlternativo;    
+    }
+    public long getCellAlternativo(){
+        return cellAlternativo;
+    }
 }

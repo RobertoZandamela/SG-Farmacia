@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="586.0" prefWidth="942.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Arquivo">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Cadastro">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="Usuários" />
+                  <MenuItem mnemonicParsing="false" text="Vendedor" />
+                  <MenuItem mnemonicParsing="false" text="Funcionario" />
+                  <MenuItem mnemonicParsing="false" text="Produto" />
+              <MenuItem mnemonicParsing="false" text="Cliente" />
+                  <MenuItem mnemonicParsing="false" text="Despesa" />
+                  <MenuItem mnemonicParsing="false" text="Categoria" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Movimentação">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Compras" />
+                  <MenuItem mnemonicParsing="false" text="Vendas" />
+                  <MenuItem mnemonicParsing="false" text="Controle de Estoque" />
+                  <MenuItem mnemonicParsing="false" text="Despesas" />
+                  <MenuItem mnemonicParsing="false" text="Cheques" />
+                  <MenuItem mnemonicParsing="false" text="Comissão dos Vendedores" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Financeiro">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Caixa inicial" />
+                  <Menu mnemonicParsing="false" text="Fluxo de Caixa">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Detalhado" />
+                      <MenuItem mnemonicParsing="false" text="Resumido" />
+                    </items>
+                  </Menu>
+                  <MenuItem mnemonicParsing="false" text="Lucro das Vendas" />
+                  <MenuItem mnemonicParsing="false" text="Contas a pagar e receber" />
+                  <MenuItem mnemonicParsing="false" text="Gráfico das vendas" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Relatórios">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Vendas" />
+                  <MenuItem mnemonicParsing="false" text="Compras" />
+                  <MenuItem mnemonicParsing="false" text="Resumo de Vendas" />
+                  <Menu mnemonicParsing="false" text="Estoque">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Estoque Minimo" />
+                        <MenuItem mnemonicParsing="false" text="Inventário" />
+                        <MenuItem mnemonicParsing="false" text="Validade de produto" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Financeiro">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Contas a pagar e receber" />
+                        <MenuItem mnemonicParsing="false" text="Fluxo de caixa resumido" />
+                        <MenuItem mnemonicParsing="false" text="Fluxo de caixa detalhado" />
+                    </items>
+                  </Menu>
+                  <MenuItem mnemonicParsing="false" text="Cheques" />
+                  <MenuItem mnemonicParsing="false" text="Despesas" />
+                  <MenuItem mnemonicParsing="false" text="Gráficos" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Consulta">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Produtos" />
+                  <MenuItem mnemonicParsing="false" text="Estoques" />
+                  <MenuItem mnemonicParsing="false" text="Clientes" />
+                  <MenuItem mnemonicParsing="false" text="Contas a pagar" />
+                  <MenuItem mnemonicParsing="false" text="Contas a receber" />
+                  <MenuItem mnemonicParsing="false" text="Histórico de vendas" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Utilitários">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Emitir recibo" />
+                  <MenuItem mnemonicParsing="false" text="Imprimir Etiqueta" />
+                  <MenuItem mnemonicParsing="false" text="Conferência e ajuste de estoque" />
+                  <MenuItem mnemonicParsing="false" text="Importação de produtos e clientes via planilha Excel" />
+                  <MenuItem mnemonicParsing="false" text="Importação de produtos de arquivo XML" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Manutenção">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Sair">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

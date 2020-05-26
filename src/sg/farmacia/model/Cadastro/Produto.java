@@ -27,14 +27,14 @@ public class Produto {
     private String fornecedor;
     private int estoqueMinimo;
     private Date garantia;
-    private String grupo;
-    private String subGrupo;
+    private String categoria;
+    
     
     public Produto(String codigo, String descricao, String formaFarmaceutica, 
             float dosagem, String fotoProduto,String marca,String referencia,
             Date validade,double precoCompra, double precoVenda, 
             double precoAtacado,float markup, String fornecedor,int estoqueMinimo,
-            Date garantia, String grupo, String subGrupo){
+            Date garantia, String categoria){
         this.codigo=codigo;
         this.descricao=descricao;
         this.formaFarmaceutica=formaFarmaceutica;
@@ -50,8 +50,11 @@ public class Produto {
         this.fornecedor =fornecedor;
         this.estoqueMinimo = estoqueMinimo;
         this.garantia = garantia;
-        this.grupo= grupo;
-        this.subGrupo = subGrupo;
+        this.categoria= categoria;
+        
+        
+    }
+    public Produto(){
         
     }
 
@@ -175,21 +178,15 @@ public class Produto {
         this.garantia = garantia;
     }
 
-    public String getGrupo() {
-        return grupo;
+    public String getCategoria() {
+        return categoria;
     }
 
-    public void setGrupo(String grupo) {
-        this.grupo = grupo;
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
     }
 
-    public String getSubGrupo() {
-        return subGrupo;
-    }
-
-    public void setSubGrupo(String subGrupo) {
-        this.subGrupo = subGrupo;
-    }
+    
    
     
 }

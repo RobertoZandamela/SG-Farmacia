@@ -2,6 +2,7 @@
 package sg.farmacia.model.DAO;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -24,8 +25,39 @@ public class ClienteDAO {
             System.out.println("Erro de conexao: "+ex.getMessage());
     }
 }
-    public void inserirClinte(){
+    public void inserirClinte(Cliente cl) throws SQLException {
         
+        //Implementar a query
+        String query="INSERT INTO clientes(nome,genero,email,contacto,"
+                + "contacto_alternativo,foto,data_nascimento,"
+                + "tipo_documento,num_documento,data_emissao_documento,"
+                + "num_casa,rua,quarteirao,bairro,distrito,provincia) VALUES(?,"
+                + "?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";                
+        try {
+            try (PreparedStatement stmt = conexao.prepareStatement(query)) {
+                stmt.setString(1, cl.getNome());
+                stmt.setString(2, String.valueOf(cl.getGenero()));
+                stmt.setString(3, cl.getEmail());
+                stmt.setLong(4, cl.getCell());
+                stmt.setLong(5, cl.getCellAlternativo());
+                stmt.setString(6, cl.getFoto());
+                stmt.setDate(7, (Date) cl.getDataNascimento());
+                stmt.setString(8, cl.getTipoDocumento());
+                stmt.setString(9, cl.getNumDocumento());
+                stmt.setDate(10,(Date) cl.getDataEmissao());
+                stmt.setString(11, cl.getNumCasa());
+                stmt.setString(12, cl.getRua());
+                stmt.setString(13, cl.getQuarteirao());
+                stmt.setString(14, cl.getBairro());
+                stmt.setString(15, cl.getDistrito());
+                stmt.setString(16, cl.getProvincia());
+                stmt.executeUpdate();
+            }                             
+        } catch (SQLException ex) {
+            System.out.println("Erro de insercao da base de dados:: "+ex.getMessage());
+        }
+    
+
     }
     
     public List<Cliente> listarClientes() throws SQLException{
@@ -40,17 +72,25 @@ public class ClienteDAO {
             lista = new ArrayList<>();
             while(rs.next()){
                 Cliente cl = new Cliente();
-                int codigo = rs.getInt("id");
-                cl.setCodigo(codigo);
+                cl.setCodigo(rs.getInt("id"));
                 cl.setNome(rs.getString("nome"));
+                String sexo = rs.getString("genero");
+                cl.setGenero(sexo.charAt(0));
                 cl.setEmail(rs.getString("email"));
+                cl.setCell(rs.getLong("contacto"));
+                cl.setCellAlternativo(rs.getLong("contacto_alternativo"));
                 cl.setFoto(rs.getString("foto"));
                 cl.setDataCadastro(rs.getDate("data_cadastro"));
-                cl.setCelular(rs.getLong("contacto"));
                 cl.setDataNascimento(rs.getDate("data_nascimento"));
-                cl.setNumBI(rs.getString("numero_bi"));
-                cl.setDataEmissao(rs.getDate("data_emisao_bi"));
-                cl.setMorada(rs.getString("morada"));
+                cl.setTipoDocumento(rs.getString("tipo_documento"));
+                cl.setNumDocumento(rs.getString("num_documento"));
+                cl.setDataEmissao(rs.getDate("data_emisao_documento"));
+                cl.setNumCasa(rs.getString("num_casa"));
+                cl.setRua(rs.getString("rua"));
+                cl.setQuarteirao(rs.getString("quarteirao"));
+                cl.setBairro(rs.getString("bairro"));
+                cl.setDistrito(rs.getString("distrito"));
+                cl.setProvincia(rs.getString("provincia"));
                lista.add(cl);
                         
             }

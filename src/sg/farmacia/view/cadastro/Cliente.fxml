@@ -1,34 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.RadioButton?>
-<?import javafx.scene.control.SplitMenuButton?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane id="AnchorPane" prefHeight="535.0" prefWidth="775.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sg.farmacia.Controller.Cadastro.ClienteController">
-    <stylesheets>
-        <URL value="@/sg/farmacia/cadastro/CSS/cliente.css" />
-    </stylesheets>
+<AnchorPane id="AnchorPane" prefHeight="535.0" prefWidth="775.0" styleClass="mainFxmlClass" stylesheets="@../../CSS/Cadastro/cliente.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sg.farmacia.Controller.Cadastro.ClienteController">
    <children>
       <TitledPane fx:id="panel_cadastroClente" animated="false" layoutX="14.0" layoutY="12.0" prefHeight="501.0" prefWidth="750.0" text="Cadastro Cliente">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
                   <Button fx:id="bt_novo" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Novo" />
-                  <Button fx:id="bt_alterar" layoutX="114.0" layoutY="14.0" mnemonicParsing="false" text="Alterar" />
-                  <Button fx:id="bt_gravar" layoutX="212.0" layoutY="14.0" mnemonicParsing="false" text="Gravar" />
+                  <Button fx:id="bt_alterar" layoutX="114.0" layoutY="14.0" mnemonicParsing="false" stylesheets="@../../CSS/Cadastro/cliente.css" text="Alterar" />
+                  <Button fx:id="bt_gravar" layoutX="212.0" layoutY="14.0" mnemonicParsing="false" onAction="#gravar" text="Gravar" />
                   <Button fx:id="bt_procurar" layoutX="295.0" layoutY="14.0" mnemonicParsing="false" text="Procurar" />
                   <Button fx:id="bt_excluir" layoutX="390.0" layoutY="14.0" mnemonicParsing="false" text="Excluir" />
-                  <Pane fx:id="panel_formulario" layoutX="12.0" layoutY="54.0" prefHeight="414.0" prefWidth="726.0" style="-fx-background-color: #00BFFF;">
+                  <Pane fx:id="panel_formulario" layoutX="12.0" layoutY="54.0" prefHeight="414.0" prefWidth="726.0" style="-fx-background-color: #00BFFF;" stylesheets="@../../CSS/Cadastro/cliente.css">
                      <children>
                         <Label fx:id="lb_codigo" layoutX="14.0" layoutY="14.0" text="Codigo" />
                         <Label fx:id="lb_dataCadastro" layoutX="81.0" layoutY="14.0" text="Data cadastro" />
@@ -71,18 +67,16 @@
                            </image>
                         </ImageView>
                         <Label fx:id="lb_email" layoutX="339.0" layoutY="256.0" text="Email" />
-                        <TextField fx:id="txt_email" layoutX="337.0" layoutY="273.0" />
-                        <Button fx:id="bt_inserirFotoCliente" layoutX="556.0" layoutY="307.0" mnemonicParsing="false" text="Inserir Foto Cliente" />
+                        <TextField fx:id="txt_email" layoutX="337.0" layoutY="273.0" stylesheets="@../../CSS/Cadastro/cliente.css" />
+                        <Button fx:id="bt_inserirFotoCliente" layoutX="556.0" layoutY="307.0" mnemonicParsing="false" stylesheets="@../../CSS/Cadastro/cliente.css" text="Inserir Foto Cliente" />
                         <Label fx:id="lb_observacao" layoutX="19.0" layoutY="324.0" text="Observação" />
                         <TextArea fx:id="txt_observacao" layoutX="18.0" layoutY="341.0" prefHeight="61.0" prefWidth="689.0" />
-                        <RadioButton fx:id="rad_masculino" layoutX="13.0" layoutY="161.0" mnemonicParsing="false" text="Masculino" />
-                        <RadioButton fx:id="rad_femenino" layoutX="97.0" layoutY="161.0" mnemonicParsing="false" text="Femenino" />
-                        <SplitMenuButton fx:id="tipoDocumento" layoutX="9.0" layoutY="95.0" mnemonicParsing="false" text="Bilhete de identidade">
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Action 1" />
-                            <MenuItem mnemonicParsing="false" text="Action 2" />
-                          </items>
-                        </SplitMenuButton>
+                        <RadioButton fx:id="rad_masculino" layoutX="13.0" layoutY="161.0" mnemonicParsing="false" selected="true" text="Masculino">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="genero" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton fx:id="rad_femenino" layoutX="97.0" layoutY="161.0" mnemonicParsing="false" text="Femenino" toggleGroup="$genero" />
+                        <ComboBox fx:id="combobox_tidoDocumento" layoutX="9.0" layoutY="95.0" prefWidth="150.0" />
                      </children></Pane>
                </children>
             </AnchorPane>

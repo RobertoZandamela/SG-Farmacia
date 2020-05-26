@@ -14,18 +14,25 @@ import java.util.Date;
 public class Usuario extends Pessoa{
     private String username,funcao,senha;
     private double salario;
-  
-    
-    public Usuario (int codigo,int celular,String nome, String email,String foto,
-         String numBI, String morada,
-         Date dataEmissao, Date dataNascimento, String username, String funcao, 
-         double salario,String senha){
-        super();
-        this.username =username;
-        this.funcao= funcao;
-        this.salario =salario;
-        this.senha=senha;
+
+    public Usuario(String username, String funcao, String senha, double salario, 
+            int codigo, long cell, long cellAlternativo, char genero, String nome,
+            String email, String foto, String tipoDocumento, String numDocumento, 
+            String rua, String quarteirao, String numCasa, String bairro, String 
+                    distrito, String provincia, Date dataEmissao, 
+                    Date dataNascimento, Date dataCadastro) {
+        super(codigo, cell, cellAlternativo, genero, nome, email, foto, 
+                tipoDocumento, numDocumento, rua, quarteirao, numCasa, bairro,
+                distrito, provincia, dataEmissao, dataNascimento, dataCadastro);
+        this.username = username;
+        this.funcao = funcao;
+        this.senha = senha;
+        this.salario = salario;
     }
+
+    
+    
+    
     public Usuario(){
         super();
     }
@@ -46,14 +53,6 @@ public class Usuario extends Pessoa{
         this.funcao = funcao;
     }
 
-    public double getSalario() {
-        return salario;
-    }
-
-    public void setSalario(double salario) {
-        this.salario = salario;
-    }
-
     public String getSenha() {
         return senha;
     }
@@ -62,6 +61,55 @@ public class Usuario extends Pessoa{
         this.senha = senha;
     }
 
+    public double getSalario() {
+        return salario;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
+
+    @Override
+    public char getGenero() {
+        return genero;
+    }
+
+    @Override
+    public void setGenero(char genero) {
+        this.genero = genero;
+    }
+
+    @Override
+    public String getTipoDocumento() {
+        return tipoDocumento;
+    }
+
+    @Override
+    public void setTipoDocumento(String tipoDocumento) {
+        this.tipoDocumento = tipoDocumento;
+    }
+
+    @Override
+    public String getNumDocumento() {
+        return numDocumento;
+    }
+
+    @Override
+    public void setNumDocumento(String numDocumento) {
+        this.numDocumento = numDocumento;
+    }
+
+    @Override
+    public Date getDataCadastro() {
+        return dataCadastro;
+    }
+
+    @Override
+    public void setDataCadastro(Date dataCadastro) {
+        this.dataCadastro = dataCadastro;
+    }
+
+    
     @Override
     public int getCodigo() {
         return codigo;
@@ -73,14 +121,25 @@ public class Usuario extends Pessoa{
     }
 
     @Override
-    public long getCelular() {
-        return celular;
+    public long getCell() {
+        return cell;
+    }
+
+    public void setCell(long cell) {
+        this.cell = cell;
     }
 
     @Override
-    public void setCelular(long celular) {
-        this.celular = celular;
+    public long getCellAlternativo() {
+        return cellAlternativo;
     }
+
+    @Override
+    public void setCellAlternativo(long cellAlternativo) {
+        this.cellAlternativo = cellAlternativo;
+    }
+
+   
 
     @Override
     public String getNome() {
@@ -112,25 +171,66 @@ public class Usuario extends Pessoa{
         this.foto = foto;
     }
 
+
+
     @Override
-    public String getNumBI() {
-        return numBI;
+    public String getRua() {
+        return rua;
     }
 
     @Override
-    public void setNumBI(String numBI) {
-        this.numBI = numBI;
-    }
-
-
-    @Override
-    public String getMorada() {
-        return morada;
+    public void setRua(String rua) {
+        this.rua = rua;
     }
 
     @Override
-    public void setMorada(String morada) {
-        this.morada = morada;
+    public String getQuarteirao() {
+        return quarteirao;
+    }
+
+    @Override
+    public void setQuarteirao(String quarteirao) {
+        this.quarteirao = quarteirao;
+    }
+
+    @Override
+    public String getNumCasa() {
+        return numCasa;
+    }
+
+    @Override
+    public void setNumCasa(String numCasa) {
+        this.numCasa = numCasa;
+    }
+
+    @Override
+    public String getBairro() {
+        return bairro;
+    }
+
+    @Override
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
+    }
+
+    @Override
+    public String getDistrito() {
+        return distrito;
+    }
+
+    @Override
+    public void setDistrito(String distrito) {
+        this.distrito = distrito;
+    }
+
+    @Override
+    public String getProvincia() {
+        return provincia;
+    }
+
+    @Override
+    public void setProvincia(String provincia) {
+        this.provincia = provincia;
     }
 
     @Override
@@ -152,5 +252,6 @@ public class Usuario extends Pessoa{
     public void setDataNascimento(Date dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
+
     
 }
